@@ -144,18 +144,21 @@ and location IN ('Europe', 'Asia', 'Africa', 'Oceania', 'North America', 'South 
 ---------------- CREATING VIEWS THAT WILL BE USED FOR TABLEAU VISUALISATION -----------
 
 --1) View containing breakdown of UK death rate overtime
+Go
 Create view UKCasesVsDeaths as
 Select Location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 From PortfolioProject..CovidDeaths
 where location like '%kingdom%'
 
 --2) View containing breakdown of UK infected rate overtime
+Go
 Create view UK_CasesVsPop as
 Select Location, date, total_cases,  population, total_deaths, (total_cases/population)*100 as InfectedPercentage
 From PortfolioProject..CovidDeaths
 where location = 'United Kingdom'
 
 --3) View containing breakdown of each countries percent of population vaccinated (minimum of 1 time)
+Go
 Create view CountryVacPercent as
 With CountryPopVsVac (continent, location, date, population, new_people_vaccinated_smoothed, VaccineCount)
 as
