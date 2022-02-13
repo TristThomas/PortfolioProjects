@@ -45,6 +45,11 @@ order by TotalDeathCount desc
 
 ------------------------ EXPLORING GLOBAL NUMBERS-----------------------------
 
+-- Global Death Rate
+
+Select SUM(new_cases) as Global_Cases, SUM(Cast(new_deaths as int)) as Global_Deaths, (SUM(Cast(new_deaths as int))/SUM(new_cases))*100 as DeathRate
+from PortfolioProject..CovidDeaths
+where continent is not null
 
 -- Highest-lowest global daily new cases
 
