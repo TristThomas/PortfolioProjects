@@ -2,7 +2,8 @@
 -- First ever SQL Project (< 1 week into using SQL)
 -- Data exploration of COVID-19
 
----------------------EXPLORATION OF CovidDeaths DATA--------------------
+----------------------------------------------------------------------------------------------------------------------------
+-- EXPLORATION OF CovidDeaths DATA
 
 -- Looking at Total Cases vs Total Deaths in the UK
 
@@ -43,7 +44,8 @@ group by location
 order by TotalDeathCount desc
 
 
------------------------- EXPLORING GLOBAL NUMBERS-----------------------------
+----------------------------------------------------------------------------------------------------------------------------
+-- EXPLORING GLOBAL NUMBERS
 
 -- Global Death Rate
 
@@ -76,7 +78,9 @@ where continent is not null
 Group by date
 order by date desc	
 
----------------------EXPLORATION OF CovidVaccinations DATA--------------------
+
+----------------------------------------------------------------------------------------------------------------------------
+-- EXPLORATION OF CovidVaccinations DATA
 
 -- Exploring Countries vs Vaccinations overtime
 -- 1) Using a CTE
@@ -147,7 +151,8 @@ where date = '2022-02-09 00:00:00.000'
 and location IN ('Europe', 'Asia', 'Africa', 'Oceania', 'North America', 'South America')	
 
 
----------------- CREATING VIEWS THAT WILL BE USED FOR TABLEAU VISUALISATION -----------
+----------------------------------------------------------------------------------------------------------------------------
+-- CREATING VIEWS THAT WILL BE USED FOR TABLEAU VISUALISATION 
 
 --1) View containing breakdown of UK death rate overtime
 Go
