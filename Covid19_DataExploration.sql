@@ -1,5 +1,5 @@
 -- The imported data is dated upto 09/02/22 Accessed via: https://ourworldindata.org/covid-deaths
--- First ever SQL Project (< 1 week into using SQL)
+-- First ever SQL Project 
 -- Data exploration of COVID-19
 
 ----------------------------------------------------------------------------------------------------------------------------
